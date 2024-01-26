@@ -1,0 +1,44 @@
+.about {
+    height: 100vh;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    flex-direction: column;
+    gap: 1rem;
+    background: #424242;
+    color: #fff;
+
+    .title {
+        color: #fff;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-me {
+        display: flex;
+        margin-top: 4rem;
+        font-size: 20px;
+        gap: 2rem;
+        padding: 0 20rem;
+
+        span {
+            font-size: 90px;
+        }
+
+        .about-me-text {
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                padding-top: 4rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+}

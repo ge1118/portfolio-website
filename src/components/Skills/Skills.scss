@@ -1,0 +1,141 @@
+.skills {
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+    flex-direction: column;
+    gap: 1rem;
+    color: #414141;
+
+    .divider {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .cards-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+
+        .cards-container {
+            display: flex;
+            height: 400px;
+            justify-content: center;
+            gap: 2rem;
+
+            input {
+                display: none;
+
+                &:checked+.card {
+                    width: 700px;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        z-index: 1;
+                    }
+
+                    .row {
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    .description {
+                        opacity: 1 !important;
+                        transform: translateY(0) !important;
+                    }
+                }
+            }
+
+            .card {
+                width: 120px;
+                border-radius: 2rem;
+                background-size: cover;
+                cursor: pointer;
+                overflow: hidden;
+                display: flex;
+                box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+                align-items: flex-end;
+                transition: 0.6s ease;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: transparent;
+                    z-index: 1;
+                    transition: background-color 0.4s ease;
+                }
+
+                .row {
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                    .icon {
+                        background: #414141;
+                        color: #fff;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 15px;
+                    }
+
+                    .description {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        // overflow: hidden;
+                        height: 80px;
+                        width: 200px;
+                        opacity: 0;
+                        text-transform: uppercase;
+                        color: black;
+                        transform: translateY(30px);
+                        transition: all 0.4s ease;
+                        font-size: 1.5rem;
+                        margin-left: 0.5rem;
+
+                        h4 {
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+
+            .card:nth-of-type(1) {
+                background-image: url(../../../public/images/frontend.png);
+                background-size: 300px 300px;
+                background-position: center;
+                background-repeat: no-repeat;
+                z-index: 0;
+            }
+
+            .card:nth-of-type(2) {
+                background-image: url(../../../public/images/backend.png);
+                background-size: 300px 300px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .card:nth-of-type(3) {
+                background-image: url(../../../public/images/tools.png);
+                background-size: 300px 300px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

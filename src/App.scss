@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700;800&family=Alatsi&family=Inter:wght@400;700;800&display=swap');
+
+$dark: #414141;
+$bright: #DFDFDF;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Abhaya Libre', serif;
+}
+
+.App {
+  background: #E1E1E1;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  overflow: hidden;
+  max-width: 2000px;
+  margin: 0 auto;
+  scroll-snap-type: y;
+  scroll-behavior: smooth;
+
+  section {
+    height: 100vh;
+    scroll-snap-align: start;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.divider-line-d {
+  width: 15rem;
+  height: 0;
+  border: $dark solid 2px;
+  border-radius: 20px;
+}
+
+.divider-line-b {
+  width: 15rem;
+  height: 0;
+  border: $bright solid 1.5px;
+  border-radius: 20px;
+}
+
+.triangle-down-d {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid $dark;
+}
+
+.triangle-down-b {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid $bright;
+}
+
+.title {
+  font-size: 75px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
