@@ -4,7 +4,7 @@ import './Projects.scss'
 const Projects = () => {
     return (
         <div>
-            <div className="projects">
+            <div className="projects" id='projects'>
                 <h1 className="title">Projects</h1>
 
                 <div className="divider">

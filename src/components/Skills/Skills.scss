@@ -37,18 +37,30 @@
                         top: 0;
                         left: 0;
                         right: 0;
-                        background-color: rgba(0, 0, 0, 0.5);
+                        background-color: rgba(0, 0, 0, 0.65);
                         z-index: 1;
                     }
 
-                    .row {
-                        position: relative;
+                    .card-items {
+                        opacity: 1;
+                        transform: translateY(0);
                         z-index: 2;
                     }
 
-                    .description {
-                        opacity: 1 !important;
-                        transform: translateY(0) !important;
+                    .row {
+                        // position: relative;
+                        z-index: 2;
+
+                        .icon {
+                            background: #fff;
+                            color: #414141;
+                            font-weight: bold;
+                        }
+
+                        .description {
+                            opacity: 1 !important;
+                            transform: translateY(0) !important;
+                        }
                     }
                 }
             }
@@ -61,9 +73,9 @@
                 overflow: hidden;
                 display: flex;
                 box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-                align-items: flex-end;
                 transition: 0.6s ease;
                 position: relative;
+                flex-direction: column;
 
                 &::after {
                     content: '';
@@ -77,9 +89,43 @@
                     transition: background-color 0.4s ease;
                 }
 
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    .card-items {
+                        gap: 6rem;
+                        row-gap: 4rem;
+                    }
+                }
+
+                .card-items {
+                    opacity: 0;
+                    padding: 3rem 4rem;
+                    transform: translateY(-30px);
+                    color: black;
+                    transition: all 0.4s ease 0.4s;
+                    display: flex;
+                    gap: 4rem;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .card-item {
+                        color: white;
+                        font-weight: bold;
+                        align-items: center;
+                        justify-content: center;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+                }
+
                 .row {
                     display: flex;
                     flex-wrap: nowrap;
+                    // align-self: flex-end;
+                    position: absolute;
+                    bottom: 0;
+                    left: 20px;
 
                     .icon {
                         background: #414141;
@@ -102,21 +148,22 @@
                         width: 200px;
                         opacity: 0;
                         text-transform: uppercase;
-                        color: black;
+                        color: white;
                         transform: translateY(30px);
                         transition: all 0.4s ease;
                         font-size: 1.5rem;
                         margin-left: 0.5rem;
+                        letter-spacing: 1px;
 
                         h4 {
-                            font-weight: 800;
+                            font-weight: 700;
                         }
                     }
                 }
             }
 
             .card:nth-of-type(1) {
-                background-image: url(../../../public/images/frontend.png);
+                background-image: url(../../images/frontend.png);
                 background-size: 300px 300px;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -124,14 +171,14 @@
             }
 
             .card:nth-of-type(2) {
-                background-image: url(../../../public/images/backend.png);
+                background-image: url(../../images/backend.png);
                 background-size: 300px 300px;
                 background-position: center;
                 background-repeat: no-repeat;
             }
 
             .card:nth-of-type(3) {
-                background-image: url(../../../public/images/tools.png);
+                background-image: url(../../images/tools.png);
                 background-size: 300px 300px;
                 background-position: center;
                 background-repeat: no-repeat;

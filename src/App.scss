@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700;800&family=Alatsi&family=Inter:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
 $dark: #414141;
 $bright: #DFDFDF;
@@ -7,7 +9,12 @@ $bright: #DFDFDF;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Abhaya Libre', serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -15,11 +22,9 @@ $bright: #DFDFDF;
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  overflow: hidden;
+  // overflow: hidden;
   max-width: 2000px;
   margin: 0 auto;
-  scroll-snap-type: y;
-  scroll-behavior: smooth;
 
   section {
     height: 100vh;
@@ -34,35 +39,49 @@ $bright: #DFDFDF;
 .divider-line-d {
   width: 15rem;
   height: 0;
-  border: $dark solid 2px;
+  border: $dark solid 1px;
   border-radius: 20px;
 }
 
 .divider-line-b {
   width: 15rem;
   height: 0;
-  border: $bright solid 1.5px;
+  border: $bright solid 1px;
   border-radius: 20px;
 }
 
 .triangle-down-d {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 25px solid $dark;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid $dark;
 }
 
 .triangle-down-b {
   width: 0;
   height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 25px solid $bright;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid $bright;
 }
 
 .title {
-  font-size: 75px;
+  font-size: 60px;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'Abhaya Libre', serif;
+}
+
+@keyframes fadeInSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

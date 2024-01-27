@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import './Skills.scss'
+import html from '../../images/html.png'
+import { frontendData } from '../../data/frontend'
+import { backendData } from '../../data/backend'
+import { toolsData } from '../../data/tools'
 
 const Skills = () => {
 
@@ -11,7 +15,7 @@ const Skills = () => {
 
     return (
         <div>
-            <div className="skills">
+            <div className="skills" id='skills'>
                 <h1 className="title">Skills</h1>
 
                 <div className="divider">
@@ -24,6 +28,9 @@ const Skills = () => {
                     <div className="cards-container">
                         <RadioInput id='c1' isChecked={isChecked} onChange={handleRadioChecked} />
                         <label htmlFor="c1" className="card">
+                            <div className="card-items">
+                                <CardItems data={frontendData} />
+                            </div>
                             <div className="row">
                                 <div className="icon">1</div>
                                 <div className="description">
@@ -34,6 +41,9 @@ const Skills = () => {
 
                         <RadioInput id='c2' isChecked={isChecked} onChange={handleRadioChecked} />
                         <label htmlFor="c2" className="card">
+                            <div className="card-items">
+                                <CardItems data={backendData} />
+                            </div>
                             <div className="row">
                                 <div className="icon">2</div>
                                 <div className="description">
@@ -44,6 +54,9 @@ const Skills = () => {
 
                         <RadioInput id='c3' isChecked={isChecked} onChange={handleRadioChecked} />
                         <label htmlFor="c3" className="card">
+                            <div className="card-items">
+                                <CardItems data={toolsData} />
+                            </div>
                             <div className="row">
                                 <div className="icon">3</div>
                                 <div className="description">
@@ -68,4 +81,13 @@ const RadioInput = ({ id, isChecked, onChange }) => (
         onChange={onChange}
         checked={isChecked === id}
     />
+)
+
+const CardItems = ({ data }) => (
+    data.map((data, i) => (
+        <div key={i} className='card-item'>
+            <img src={data.logo} alt="" style={{ width: '4rem', height: '4rem' }} />
+            <p>{data.skill}</p>
+        </div>
+    ))
 )
