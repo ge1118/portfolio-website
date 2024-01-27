@@ -7,7 +7,7 @@ import Logo from '../../images/logo.png'
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar">
+            <div className="navbar" id='home'>
                 <div className="logo">
                     <Link to='home' smooth={true}>
                         <img src={Logo} alt="Logo" />

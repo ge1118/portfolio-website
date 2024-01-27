@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 3rem;
+    position: absolute;
+    bottom: 20px;
+
+    .copyright {
+        color: #7e7e7e;
+    }
+
+    .back-to-top {
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+
+        i {
+            color: #56606e;
+            align-self: center;
+        }
+    }
+
+}

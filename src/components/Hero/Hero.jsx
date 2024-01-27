@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import './Hero.scss'
 import Navbar from '../Navbar/Navbar'
 import TagCloud from 'TagCloud';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
 
@@ -33,7 +34,7 @@ const Hero = () => {
     return (
         <div>
             <Navbar />
-            <div className="hero" id='home'>
+            <div className="hero">
                 <div className="hero-left">
                     <div className="intro">
                         <h2>I'm a</h2>
@@ -42,7 +43,9 @@ const Hero = () => {
 
                     <div className="buttons">
                         <button className="resume">Resume</button>
-                        <button className="portfolio">Portfolio</button>
+                        <button className="portfolio">
+                            <Link to='projects'>Projects</Link>
+                        </button>
                     </div>
                 </div>
 

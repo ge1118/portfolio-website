@@ -151,7 +151,7 @@
                         color: white;
                         transform: translateY(30px);
                         transition: all 0.4s ease;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         margin-left: 0.5rem;
                         letter-spacing: 1px;
 
@@ -160,29 +160,30 @@
                         }
                     }
                 }
+
+                &:nth-of-type(1) {
+                    background-image: url(../../images/frontend.png);
+                    background-size: 300px 300px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 0;
+                }
+
+                &:nth-of-type(2) {
+                    background-image: url(../../images/backend.png);
+                    background-size: 300px 300px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                &:nth-of-type(3) {
+                    background-image: url(../../images/tools.png);
+                    background-size: 300px 300px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
             }
 
-            .card:nth-of-type(1) {
-                background-image: url(../../images/frontend.png);
-                background-size: 300px 300px;
-                background-position: center;
-                background-repeat: no-repeat;
-                z-index: 0;
-            }
-
-            .card:nth-of-type(2) {
-                background-image: url(../../images/backend.png);
-                background-size: 300px 300px;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-
-            .card:nth-of-type(3) {
-                background-image: url(../../images/tools.png);
-                background-size: 300px 300px;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
         }
     }
 }

@@ -1,9 +1,10 @@
 .hero {
-    padding: 0 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 100px - 5rem) !important;
+    max-width: 1400px;
+    margin: 0 auto;
 
     .hero-left {
         flex: 1;
@@ -18,13 +19,13 @@
 
 
             h2 {
-                font-size: 60px;
+                font-size: 50px;
                 color: #8E8E8E;
                 font-weight: 700;
             }
 
             h1 {
-                font-size: 120px;
+                font-size: 100px;
                 color: #414141;
                 font-family: 'Abhaya Libre', serif;
                 font-weight: 800;
@@ -37,11 +38,12 @@
             gap: 4rem;
 
             button {
+                width: 195px;
                 padding: 0.5rem 3rem;
                 border: #8E8E8E solid 1px;
                 background: transparent;
                 border-radius: 30px;
-                font-size: 20px;
+                font-size: 18px;
                 color: #8E8E8E;
                 text-transform: uppercase;
                 font-weight: 500;
@@ -54,7 +56,6 @@
     .hero-right {
         display: flex;
         flex: 1;
-        overflow: hidden;
 
     }
 
