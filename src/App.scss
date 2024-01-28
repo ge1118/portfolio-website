@@ -20,12 +20,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  // overflow: hidden;
   max-width: 2000px;
   margin: 0 auto;
+  overflow-x: hidden;
 
   section {
-    height: 100vh;
     scroll-snap-align: start;
   }
 }
@@ -81,5 +80,11 @@ html {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    overflow-x: auto;
   }
 }

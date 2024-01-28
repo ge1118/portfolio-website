@@ -27,7 +27,7 @@
             display: flex;
             gap: 3rem;
 
-            span {
+            .fa-solid {
                 font-size: 50px;
 
                 &:nth-of-type(2) {
@@ -66,6 +66,7 @@
         background: #323841;
         height: 100vh;
         padding-left: 8rem;
+        padding-top: 5rem;
 
         .exp-header {
             display: flex;
@@ -135,6 +136,262 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1540px) {
+    .about {
+        .about-left {
+            .inner-outline {
+                padding: 4rem 2rem;
+            }
+
+            .about-me {
+                gap: 2rem;
+
+                .fa-solid {
+                    font-size: 45px;
+                }
+
+                .about-me-text {
+                    h2 {
+                        font-size: 1.1rem;
+
+                        span {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-right {
+            .exp-header {
+                h1 {
+                    font-size: 35px;
+                }
+            }
+
+            .exp-list {
+                .exp-item {
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .exp-details {
+                .position {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .about {
+        .about-left {
+            .about-me {
+                gap: 2rem;
+
+                .fa-solid {
+                    font-size: 40px;
+                }
+
+                .about-me-text {
+                    h2 {
+                        font-size: 1rem;
+
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-right {
+            gap: 1.7rem;
+
+            .exp-header {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+
+            .exp-list {
+                .exp-item {
+                    font-weight: 700;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .exp-details {
+                .position {
+                    font-size: 1.5rem;
+                }
+
+                .company,
+                .duration,
+                .roles {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .about {
+        .about-left {
+            .inner-outline {
+                margin: 2rem 3rem;
+            }
+
+            .title {
+                font-size: 45px;
+            }
+
+            .about-me {
+                gap: 2rem;
+
+                .fa-solid {
+                    font-size: 35px;
+                }
+
+                .about-me-text {
+                    h2 {
+                        font-size: 0.9rem;
+
+                        span {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .about {
+        height: auto;
+        flex-direction: column;
+
+        .about-left {
+            .inner-outline {
+                margin: 2rem 3rem;
+                height: 100vh;
+            }
+
+            .title {
+                font-size: 45px;
+            }
+
+            .about-me {
+                gap: 1.5rem;
+
+                .fa-solid {
+                    font-size: 35px;
+                }
+
+                .about-me-text {
+                    h2 {
+                        font-size: 0.9rem;
+
+                        span {
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-right {
+
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about {
+        flex-direction: column;
+        gap: 4rem;
+
+        .about-left {
+            .inner-outline {
+                margin: 20px;
+                padding: 30px;
+                justify-content: start;
+                height: auto;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .about-me {
+                gap: 0;
+
+                .fa-solid {
+                    display: none;
+                }
+
+                .about-me-text {
+                    h2 {
+                        font-size: 1.1rem;
+                        padding-top: 2rem;
+                        text-align: center;
+
+                        span {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-right {
+            height: auto;
+            padding: 3rem;
+            opacity: 1 !important;
+
+            .exp-list {
+                flex-direction: column;
+                gap: 10px;
+
+                .exp-item {
+                    color: #296A78;
+                    font-weight: 600;
+                    font-size: 1.3rem;
+                    padding-left: 10px;
+
+                    &.selected {
+                        border-left: #296A78 solid 4px;
+                        border-bottom: 0;
+                    }
+                }
+            }
+
+            .exp-details {
+                width: 100%;
+
+                .position {
+                    font-size: 1.2rem;
+                }
+
+                .roles {
+                    margin: 2rem 1.5rem;
+
+                    li {
+                        padding-left: 0 !important;
+                    }
+                }
+            }
+
+
         }
     }
 }

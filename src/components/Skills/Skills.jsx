@@ -58,14 +58,14 @@ const Skills = () => {
                 <div className="cards-wrapper">
                     <motion.div
                         className="cards-container"
-                        variants={parentVariants}
+                        // variants={parentVariants}
                         initial='initial'
                         whileInView='animate'
                         viewport={{ amount: 0.5 }}>
                         {dataWithLabels.map((item, i) => (
                             <>
                                 <RadioInput id={`c${i + 1}`} isChecked={isChecked} onChange={handleRadioChecked} />
-                                <motion.label htmlFor={`c${i + 1}`} className="card-label" variants={childVariants}>
+                                <motion.label htmlFor={`c${i + 1}`} className="card-label" >
                                     <div className="card-items">
                                         <CardItems data={item.data} />
                                     </div>

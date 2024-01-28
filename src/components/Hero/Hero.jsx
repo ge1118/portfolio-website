@@ -100,8 +100,8 @@ const Hero = () => {
                             download='Resume.pdf'>
                             Resume
                         </motion.a>
-                        <motion.div className='btn' variants={childVariants} whileHover='hoverButton'>
-                            <Link to='projects'>
+                        <motion.div variants={childVariants} whileHover='hoverButton'>
+                            <Link to='projects' className='btn' >
                                 Projects
                             </Link>
                         </motion.div>

@@ -86,7 +86,7 @@
             position: relative;
             text-align: center;
 
-            h4 {
+            h3 {
                 color: #323841;
 
             }
@@ -122,6 +122,61 @@
                     cursor: pointer;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact {
+        .contact-wrapper {
+            height: auto;
+            flex-direction: column;
+
+            .contact-left,
+            .divider {
+                display: none;
+            }
+
+            .contact-mid {
+                padding-top: 4rem;
+                gap: 2rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                h1 {
+                    letter-spacing: 5px;
+                    font-size: 40px;
+                    margin-top: 2rem;
+                }
+
+                .info-list {
+                    padding-left: 8rem;
+                    margin-top: 2rem;
+                    margin-bottom: 6rem;
+                    gap: 2rem;
+                    font-size: 1rem;
+                }
+            }
+
+            .contact-right {
+                gap: 2rem;
+                margin-top: 4rem;
+
+                h3 {
+                    margin: 1rem;
+                }
+
+                form {
+                    gap: 2rem;
+
+                    input,
+                    textarea {
+                        width: 280px !important;
+                    }
+                }
+            }
+
         }
     }
 }
