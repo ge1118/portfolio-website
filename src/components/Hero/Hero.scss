@@ -19,17 +19,21 @@
 
 
             h2 {
-                font-size: 50px;
-                color: #8E8E8E;
-                font-weight: 700;
+                span {
+                    font-size: 50px;
+                    color: #8E8E8E;
+                    font-weight: 700;
+                }
             }
 
             h1 {
-                font-size: 100px;
-                color: #414141;
-                font-family: 'Abhaya Libre', serif;
-                font-weight: 800;
-                line-height: 100px;
+                span {
+                    font-size: 100px;
+                    color: #414141;
+                    font-family: 'Abhaya Libre', serif;
+                    font-weight: 800;
+                    line-height: 100px;
+                }
             }
         }
 
@@ -37,7 +41,7 @@
             display: flex;
             gap: 4rem;
 
-            button {
+            .btn {
                 width: 195px;
                 padding: 0.5rem 3rem;
                 border: #8E8E8E solid 1px;
@@ -48,9 +52,18 @@
                 text-transform: uppercase;
                 font-weight: 500;
                 cursor: pointer;
+                text-decoration: none;
+                text-align: center;
+
+                // &:hover {
+                //     transition: all 1s ease;
+                //     transform: scale(1.05) !important;
+                //     color: #585858;
+                //     font-weight: 600;
+                //     border-color: #585858;
+                // }
             }
         }
-
     }
 
     .hero-right {

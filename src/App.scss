@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700;800&family=Alatsi&family=Inter:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;700;800&family=Alatsi&family=Poppins:wght@400;500;700;800&display=swap');
 
 $dark: #414141;
 $bright: #DFDFDF;
@@ -74,7 +72,7 @@ html {
   font-family: 'Abhaya Libre', serif;
 }
 
-@keyframes fadeInSlideRight {
+@keyframes fadeInSlideLeft {
   0% {
     opacity: 0;
     transform: translateX(30px);

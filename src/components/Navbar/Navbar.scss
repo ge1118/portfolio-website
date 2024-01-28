@@ -20,6 +20,8 @@
 
         .nav-menu {
             list-style: none;
+            transform: scale(1) !important;
+            transition: all 0.5s ease;
 
             .menu-links {
                 text-decoration: none;
@@ -29,6 +31,14 @@
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 cursor: pointer;
+            }
+
+            &:hover {
+                transform: scale(1.1) !important;
+
+                .menu-links {
+                    color: #5497A6;
+                }
             }
         }
     }

@@ -4,8 +4,28 @@ import html from '../../images/html.png'
 import { frontendData } from '../../data/frontend'
 import { backendData } from '../../data/backend'
 import { toolsData } from '../../data/tools'
+import { motion } from 'framer-motion'
 
 const Skills = () => {
+
+    const parentVariants = {
+        initial: { opacity: 0 },
+        animate: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.3,
+            }
+        }
+    }
+
+    const childVariants = {
+        initial: { opacity: 0 },
+        animate: {
+            opacity: 1,
+            delay: 0.4,
+        }
+    }
 
     const [isChecked, setIsChecked] = useState('c1');
 
@@ -13,10 +33,21 @@ const Skills = () => {
         setIsChecked(e.target.id);
     }
 
+    const dataWithLabels = [
+        { label: "frontend", data: frontendData },
+        { label: "backend", data: backendData },
+        { label: "tools", data: toolsData }
+    ];
+
     return (
         <div>
             <div className="skills" id='skills'>
-                <h1 className="title">Skills</h1>
+                <motion.h1
+                    className="title"
+                    initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >Skills</motion.h1>
 
                 <div className="divider">
                     <div className='divider-line-d'></div>
@@ -25,46 +56,29 @@ const Skills = () => {
                 </div>
 
                 <div className="cards-wrapper">
-                    <div className="cards-container">
-                        <RadioInput id='c1' isChecked={isChecked} onChange={handleRadioChecked} />
-                        <label htmlFor="c1" className="card">
-                            <div className="card-items">
-                                <CardItems data={frontendData} />
-                            </div>
-                            <div className="row">
-                                <div className="icon">1</div>
-                                <div className="description">
-                                    <h4>Front - End</h4>
-                                </div>
-                            </div>
-                        </label>
-
-                        <RadioInput id='c2' isChecked={isChecked} onChange={handleRadioChecked} />
-                        <label htmlFor="c2" className="card">
-                            <div className="card-items">
-                                <CardItems data={backendData} />
-                            </div>
-                            <div className="row">
-                                <div className="icon">2</div>
-                                <div className="description">
-                                    <h4>Back - End</h4>
-                                </div>
-                            </div>
-                        </label>
-
-                        <RadioInput id='c3' isChecked={isChecked} onChange={handleRadioChecked} />
-                        <label htmlFor="c3" className="card">
-                            <div className="card-items">
-                                <CardItems data={toolsData} />
-                            </div>
-                            <div className="row">
-                                <div className="icon">3</div>
-                                <div className="description">
-                                    <h4>Tools</h4>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
+                    <motion.div
+                        className="cards-container"
+                        variants={parentVariants}
+                        initial='initial'
+                        whileInView='animate'
+                        viewport={{ amount: 0.5 }}>
+                        {dataWithLabels.map((item, i) => (
+                            <>
+                                <RadioInput id={`c${i + 1}`} isChecked={isChecked} onChange={handleRadioChecked} />
+                                <motion.label htmlFor={`c${i + 1}`} className="card-label" variants={childVariants}>
+                                    <div className="card-items">
+                                        <CardItems data={item.data} />
+                                    </div>
+                                    <div className="row">
+                                        <div className="icon">{i + 1}</div>
+                                        <div className="description">
+                                            <h4>{item.label}</h4>
+                                        </div>
+                                    </div>
+                                </motion.label>
+                            </>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </div>

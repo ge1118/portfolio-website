@@ -2,10 +2,30 @@ import React, { useState } from 'react'
 import './About.scss'
 import '../../App.scss'
 import { experiencesData } from '../../data/experiences'
+import { motion } from 'framer-motion'
 
 const About = () => {
 
     const [expContent, setExpContent] = useState(0);
+
+    const parentVariants = {
+        initial: { opacity: 0 },
+        animate: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.5,
+            }
+        }
+    }
+
+    const childVariants = {
+        initial: { opacity: 0 },
+        animate: {
+            opacity: 1,
+            delay: 0.4,
+        }
+    }
 
     return (
         <div>
@@ -26,13 +46,18 @@ const About = () => {
                     </div>
                 </div>
 
-                <div className="about-right">
+                <motion.div
+                    className="about-right"
+                    variants={parentVariants}
+                    initial='initial'
+                    whileInView='animate'
+                    viewport={{ amount: 0.5 }}>
                     <div className="exp-header">
-                        <h1>Experience</h1>
+                        <motion.h1 variants={childVariants} >Experiences</motion.h1>
                         <hr />
                     </div>
 
-                    <div className="exp-list">
+                    <motion.div variants={childVariants} className="exp-list">
                         {experiencesData.map((experience, i) => (
                             <div
                                 key={i}
@@ -40,9 +65,9 @@ const About = () => {
                                 className={i === expContent ? 'selected exp-item' : 'exp-item'}
                             >{experience.title}</div>
                         ))}
-                    </div>
+                    </motion.div>
 
-                    <div className="exp-details" key={expContent}>
+                    <motion.div variants={childVariants} className="exp-details" key={expContent}>
                         <div className="position">
                             {experiencesData[expContent].position}
                         </div>
@@ -59,8 +84,8 @@ const About = () => {
                                 ))}
                             </ul>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </div >
     )

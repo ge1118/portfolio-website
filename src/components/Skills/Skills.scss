@@ -27,7 +27,7 @@
             input {
                 display: none;
 
-                &:checked+.card {
+                &:checked+.card-label {
                     width: 700px;
 
                     &::after {
@@ -65,7 +65,7 @@
                 }
             }
 
-            .card {
+            .card-label {
                 width: 120px;
                 border-radius: 2rem;
                 background-size: cover;

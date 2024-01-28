@@ -2,9 +2,31 @@ import React from 'react'
 import './Navbar.scss'
 import { Link } from 'react-scroll'
 import Logo from '../../images/logo.png'
+import { motion } from 'framer-motion'
 
 
 const Navbar = () => {
+    const menuVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    }
+
+    const itemVariants = {
+        hidden: { y: -20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.3
+            }
+        },
+    }
+
     return (
         <div>
             <div className="navbar" id='home'>
@@ -14,33 +36,22 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <ul className="menu">
-                    <li className="nav-menu">
-                        <Link to='home' className='menu-links'>
-                            Home
-                        </Link>
-                    </li>
-                    <li className="nav-menu">
-                        <Link to='about' className='menu-links'>
-                            About Me
-                        </Link>
-                    </li>
-                    <li className="nav-menu">
-                        <Link to='skills' className='menu-links'>
-                            Skills
-                        </Link>
-                    </li>
-                    <li className="nav-menu">
-                        <Link to='projects' className='menu-links'>
-                            Projects
-                        </Link>
-                    </li>
-                    <li className="nav-menu">
-                        <Link to='contact' className='menu-links'>
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
+                <motion.ul
+                    variants={menuVariants}
+                    initial='hidden'
+                    animate='visible'
+                    className="menu">
+                    {['home', 'about', 'skills', 'projects', 'contact'].map((item, i) => (
+                        <motion.li
+                            key={i}
+                            variants={itemVariants}
+                            className="nav-menu">
+                            <Link to={item} className='menu-links'>
+                                {item.charAt(0).toUpperCase() + item.slice(1)}
+                            </Link>
+                        </motion.li>
+                    ))}
+                </motion.ul>
             </div>
         </div>
     )

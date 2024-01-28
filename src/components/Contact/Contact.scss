@@ -14,13 +14,14 @@
             position: relative;
 
             p {
-                transform: rotate(-90deg);
+                transform: rotate(180deg);
                 white-space: nowrap;
                 position: absolute;
-                top: 50%;
-                left: 10%;
+                top: 40%;
+                left: 40%;
                 letter-spacing: 3px;
                 color: #323841;
+                writing-mode: vertical-lr;
             }
         }
 
@@ -83,9 +84,11 @@
             align-items: center;
             gap: 7rem;
             position: relative;
+            text-align: center;
 
             h4 {
                 color: #323841;
+
             }
 
             form {
@@ -116,6 +119,7 @@
                     color: #DFDFDF;
                     padding: 15px;
                     border-radius: 2px;
+                    cursor: pointer;
                 }
             }
         }
