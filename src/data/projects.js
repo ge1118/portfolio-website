@@ -13,7 +13,7 @@ export const projectsData = [
         skills: 'HTML, SASS, JavaScript, React',
         description: 'Design a portfolio website using HTML, JavaScript, SASS, and React, integrated with email.js, TagCloud.js, and Framer Motion for enhanced interactivity. The site provides a comprehensive view of my professional journey and accomplishments.',
         github: 'https://github.com/ge1118/portfolio-website',
-        source: '',
+        source: 'https://leah-portfolio-website.netlify.app/',
     },
     {
         type: 'Frontend Project',
