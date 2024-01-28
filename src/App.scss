@@ -22,7 +22,7 @@ html {
   gap: 5rem;
   max-width: 2000px;
   margin: 0 auto;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   section {
     scroll-snap-align: start;
@@ -83,7 +83,7 @@ html {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1225px) {
   .App {
     overflow-x: auto;
   }
