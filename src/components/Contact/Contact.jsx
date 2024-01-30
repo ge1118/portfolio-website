@@ -12,7 +12,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_t1jvpck', 'template_63vbd9h', form.current, 'WTJd8eCZYGJyVwxql')
+        emailjs.sendForm('service_7ocg5ng', 'template_63vbd9h', form.current, 'WTJd8eCZYGJyVwxql')
             .then((result) => {
                 console.log(result.text);
                 form.current.reset();
@@ -79,11 +79,11 @@ const Contact = () => {
                             </motion.div>
                             <motion.div className="info" variants={childVariants}>
                                 <p>Email</p>
-                                <p>greean246@gmail.com</p>
+                                <p>leah.kim0118@gmail.com</p>
                             </motion.div>
                             <motion.div className="info" variants={childVariants}>
                                 <p>Phone</p>
-                                <p>+1 4168962757</p>
+                                <p>+1 416-896-2757</p>
                             </motion.div>
                             <motion.div className="info" variants={childVariants}>
                                 <p>

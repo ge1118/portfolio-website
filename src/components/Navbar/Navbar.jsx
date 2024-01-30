@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.scss'
-import { Link } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
+import { Link as RouterLink } from 'react-router-dom'
 import Logo from '../../images/logo.png'
 import { motion } from 'framer-motion'
 
 
-const Navbar = () => {
+const Navbar = ({ navType }) => {
 
     const [isMobile, setIsMobile] = useState(false);
-    const [isMenuShown, setIsMenuShown] = useState(false)
-    const [isBlack, setIsBlack] = useState(true)
+    const [isMenuShown, setIsMenuShown] = useState(false);
+    const [type] = useState(navType);
 
     useEffect(() => {
         const checkIfMobile = () => {
-            setIsMobile(window.innerWidth <= 800);
+            if (type === 'home')
+                setIsMobile(window.innerWidth <= 1000);
         }
         checkIfMobile();
         window.addEventListener('resize', checkIfMobile)
@@ -44,45 +46,72 @@ const Navbar = () => {
     }
 
     return (
-        <div>
-            <div className="navbar" id='home'>
-                <div className="logo">
-                    <Link to='home' smooth={true}>
-                        <img src={Logo} alt="Logo" />
-                    </Link>
-                </div>
-
+        <div className="navbar" id='home'>
+            <div className="logo">
                 {
-                    isMobile &&
-                    <div className="nav-icon" onClick={() => { setIsMenuShown((prev => !prev)); setIsBlack((prev => !prev)); }}>
-                        <i className="fa-solid fa-bars" style={{ color: isBlack ? 'black' : 'white' }}></i>
-                    </div>
-                }
-
-                {
-                    (isMenuShown || !isMobile) ?
-                        <motion.ul
-                            variants={menuVariants}
-                            initial='hidden'
-                            whileInView='visible'
-                            viewport={{ amount: 0.5 }}
-                            className="menu">
-                            {['home', 'about', 'skills', 'projects', 'contact'].map((item, i) => (
-                                <motion.li
-                                    key={i}
-                                    variants={itemVariants}
-                                    className="nav-menu">
-                                    <Link
-                                        to={item}
-                                        className='menu-links'
-                                        onClick={() => setIsMenuShown((prev => !prev))}>
-                                        {item.charAt(0).toUpperCase() + item.slice(1)}
-                                    </Link>
-                                </motion.li>
-                            ))}
-                        </motion.ul> : ''
+                    type === 'GoToHome' ?
+                        <RouterLink to='/'>
+                            <img src={Logo} alt="Logo" />
+                        </RouterLink> :
+                        <ScrollLink to='home' smooth={true}>
+                            <img src={Logo} alt="Logo" />
+                        </ScrollLink>
                 }
             </div>
+
+            {
+                isMobile && (!isMenuShown ?
+                    <div className="nav-icon" onClick={() => { setIsMenuShown((prev => !prev)); }}>
+                        <i className="fa-solid fa-bars" style={{ color: 'black' }}></i>
+                    </div> :
+                    <div className="nav-icon" onClick={() => { setIsMenuShown((prev => !prev)); }}>
+                        <i className="fa-solid fa-x" style={{ color: 'white' }}></i>
+                    </div>)
+            }
+
+            {
+                ((isMenuShown || !isMobile) && type === 'home') ?
+                    <motion.ul
+                        variants={menuVariants}
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ amount: 0.5 }}
+                        className="menu">
+                        {['home', 'about', 'skills', 'projects', 'contact'].map((item, i) => (
+                            <motion.li
+                                key={i}
+                                variants={itemVariants}
+                                className="nav-menu">
+                                <ScrollLink
+                                    to={item}
+                                    className='menu-links'
+                                    onClick={() => setIsMenuShown((prev => !prev))}>
+                                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                                </ScrollLink>
+                            </motion.li>
+                        ))}
+                    </motion.ul> : ''
+            }
+
+            {
+                (type === 'GoToHome') &&
+                <motion.ul
+                    variants={menuVariants}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ amount: 0.5 }}
+                    className="menu">
+                    <motion.li
+                        variants={itemVariants}
+                        className="nav-menu">
+                        <RouterLink
+                            to='/'
+                            className='menu-links'>
+                            Go Back To Home
+                        </RouterLink>
+                    </motion.li>
+                </motion.ul>
+            }
         </div>
     )
 }

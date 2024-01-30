@@ -1,6 +1,6 @@
 export const experiencesData = [
     {
-        title: 'TO',
+        title: 'TO (OPS)',
         position: 'System Support Officer (Co-op)',
         company: 'Tribunals Ontario',
         duration: 'May 2023 - Aug 2023',
@@ -11,7 +11,7 @@ export const experiencesData = [
         ]
     },
     {
-        title: 'MTO',
+        title: 'MTO (OPS)',
         position: 'Jr. Technical Analyst (Co-op)',
         company: 'Ministry of Transportation Ontario',
         duration: 'Sep 2022 - Dec 2022',

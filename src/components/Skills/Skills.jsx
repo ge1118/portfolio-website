@@ -63,7 +63,7 @@ const Skills = () => {
                         whileInView='animate'
                         viewport={{ amount: 0.5 }}>
                         {dataWithLabels.map((item, i) => (
-                            <>
+                            <React.Fragment key={i}>
                                 <RadioInput id={`c${i + 1}`} isChecked={isChecked} onChange={handleRadioChecked} />
                                 <motion.label htmlFor={`c${i + 1}`} className="card-label" >
                                     <div className="card-items">
@@ -76,7 +76,7 @@ const Skills = () => {
                                         </div>
                                     </div>
                                 </motion.label>
-                            </>
+                            </React.Fragment>
                         ))}
                     </motion.div>
                 </div>

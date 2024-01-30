@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     padding-top: 6rem;
+    padding-bottom: 16rem;
     flex-direction: column;
     gap: 1rem;
     color: #414141;
-    height: 100vh;
 
     .divider {
         display: flex;
@@ -187,7 +187,32 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1300px) {
+    .skills {
+        height: auto;
+        padding-bottom: 5rem;
+
+        .cards-wrapper {
+            .cards-container {
+                input {
+                    display: none;
+
+                    &:checked+.card-label {
+                        width: 560px;
+                    }
+                }
+            }
+
+            .card-label {
+                .card-items {
+                    gap: 3rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
     .skills {
         height: auto;
         padding-bottom: 4rem;
@@ -214,18 +239,13 @@
 
                 input {
                     &:checked+.card-label {
-                        width: 300px;
+                        width: 750px;
                         height: 400px;
                         gap: 0;
 
 
                         .card-item {
                             overflow: scroll;
-
-                            img {
-                                width: 3rem !important;
-                                height: 3rem !important;
-                            }
 
                             p {
                                 font-size: 12px;
@@ -244,22 +264,13 @@
                 }
 
                 .card-label {
-                    width: 300px;
-                    height: 300px;
+                    width: 750px;
+                    height: 200px;
 
                     .card-items {
                         overflow: scroll;
-                        row-gap: 1.5rem;
-                        column-gap: 2rem;
-                        padding: 2rem;
-                    }
-
-                    &:nth-of-type(2),
-                    &:nth-of-type(3) {
-                        .card-items {
-                            row-gap: 1.5rem !important;
-                            column-gap: 3.5rem !important;
-                        }
+                        gap: 4rem !important;
+                        padding: 3rem 8rem;
                     }
 
                     .row {
@@ -268,6 +279,51 @@
                             opacity: 1;
                             color: #414141;
                         }
+                    }
+
+                    &:nth-of-type(1) {
+                        background-size: 170px 170px;
+                    }
+
+                    &:nth-of-type(2) {
+                        background-size: 170px 170px;
+                    }
+
+                    &:nth-of-type(3) {
+                        background-size: 170px 170px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills {
+        .cards-wrapper {
+            .cards-container {
+                input {
+                    &:checked+.card-label {
+                        width: 500px;
+                        height: 400px;
+
+                        .card-item {
+                            img {
+                                width: 3rem !important;
+                                height: 3rem !important;
+                            }
+                        }
+                    }
+                }
+
+                .card-label {
+                    width: 500px;
+                    height: 300px;
+
+                    .card-items {
+                        overflow: scroll;
+                        gap: 2.5rem;
+                        padding: 3rem;
                     }
 
                     &:nth-of-type(1) {
@@ -280,6 +336,41 @@
 
                     &:nth-of-type(3) {
                         background-size: 200px 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .skills {
+        .cards-wrapper {
+            .cards-container {
+                input {
+                    &:checked+.card-label {
+                        width: 300px;
+                        height: 400px;
+                    }
+                }
+
+                .card-label {
+                    width: 300px;
+                    height: 300px;
+
+                    .card-items {
+                        overflow: scroll;
+                        row-gap: 1.5rem !important;
+                        column-gap: 2rem !important;
+                        padding: 2rem;
+                    }
+
+                    &:nth-of-type(2),
+                    &:nth-of-type(3) {
+                        .card-items {
+                            row-gap: 1.5rem !important;
+                            column-gap: 3.5rem !important;
+                        }
                     }
                 }
             }

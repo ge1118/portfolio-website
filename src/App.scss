@@ -11,7 +11,7 @@ $bright: #DFDFDF;
 }
 
 html {
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -24,9 +24,10 @@ html {
   margin: 0 auto;
   // overflow-x: hidden;
 
-  section {
-    scroll-snap-align: start;
-  }
+  // section {
+  //   height: 100vh;
+  //   scroll-snap-align: start;
+  // }
 }
 
 ::-webkit-scrollbar {
@@ -80,11 +81,5 @@ html {
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@media screen and (max-width: 1225px) {
-  .App {
-    overflow-x: auto;
   }
 }

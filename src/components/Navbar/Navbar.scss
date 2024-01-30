@@ -36,7 +36,8 @@
             &:hover {
                 transform: scale(1.1) !important;
 
-                .menu-links {
+                .menu-links,
+                .back-home {
                     color: #5497A6;
                 }
             }
@@ -44,7 +45,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .navbar {
         height: auto;
         flex-direction: column;
@@ -53,19 +54,21 @@
 
         .logo {
             img {
-                width: 4rem;
-                padding: 14px 0 10px 16px
+                width: 6rem;
+                padding: 20px 0 10px 16px;
+                margin-left: 20px;
             }
         }
 
         .nav-icon {
             position: fixed;
-            right: 16px;
-            top: 14px;
+            right: 40px;
+            top: 20px;
             z-index: 99;
+            cursor: pointer;
 
             i {
-                transform: scale(1.7);
+                transform: scale(2.4);
             }
         }
 
@@ -87,6 +90,29 @@
                     opacity: 1;
                     font-weight: 400;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        .logo {
+            img {
+                width: 4rem;
+                padding: 14px 0 10px 16px;
+                margin: 0;
+            }
+        }
+
+        .nav-icon {
+            position: fixed;
+            right: 20px;
+            top: 14px;
+            z-index: 99;
+
+            i {
+                transform: scale(2);
             }
         }
     }

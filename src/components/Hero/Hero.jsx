@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import './Hero.scss'
 import Navbar from '../Navbar/Navbar'
 import TagCloud from 'TagCloud';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Hero = () => {
 
@@ -64,7 +65,7 @@ const Hero = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar navType='home' />
             <div className="hero">
                 <motion.div
                     variants={parentVariants}
@@ -92,18 +93,15 @@ const Hero = () => {
                     <motion.div
                         className="buttons"
                         variants={childVariants}>
-                        <motion.a
-                            className='btn'
+                        <motion.div
                             variants={childVariants}
-                            whileHover='hoverButton'
-                            href="/Resume.pdf"
-                            download='Resume.pdf'>
-                            Resume
-                        </motion.a>
+                            whileHover='hoverButton'>
+                            <RouterLink to='/resume' className='btn'>Resume</RouterLink>
+                        </motion.div>
                         <motion.div variants={childVariants} whileHover='hoverButton'>
-                            <Link to='projects' className='btn' >
+                            <ScrollLink to='projects' className='btn' >
                                 Projects
-                            </Link>
+                            </ScrollLink>
                         </motion.div>
                     </motion.div>
                 </motion.div>
