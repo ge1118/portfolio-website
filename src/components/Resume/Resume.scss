@@ -2,9 +2,38 @@
     padding: 1.5rem 5rem;
     display: flex;
     justify-content: center;
+    gap: 2rem;
 
     iframe {
         width: 90%;
         height: 1000px;
+    }
+
+    .download-btn {
+        text-decoration: none;
+        border: #414141 1px solid;
+        height: fit-content;
+        border-radius: 30px;
+        color: #414141;
+        padding: 1rem;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .resume {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+        align-items: center;
+
+        iframe {
+            width: 100%;
+        }
+
+        .download-btn {
+            width: fit-content;
+            margin-top: 2rem;
+        }
     }
 }
