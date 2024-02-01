@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Portfolio Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+Crafted with React.js, SCSS, HTML, and JavaScript, this Portfolio Site is a culmination of my professional journey, encapsulating my skills, projects, and experiences. Featuring a sleek, responsive design, it's animated with framer-motion and includes interactive elements like a tag cloud in the Hero section. It's a window into my professional world, showcasing my development journey, key accomplishments, and the creative flair that I bring to my work.
 
-## Available Scripts
+## Key Features
+- Hero Section: Navigation bar and resume download button.
+- About Section: Insight into my personal and professional background.
+- Projects Section: Comprehensive project details with code and demos.
+- Skills Section: Array of technical skills in front-end, back-end, and tools.
+- Contact Section: Direct links to GitHub, LinkedIn, and personal contact options.
 
-In the project directory, you can run:
+## Technologies
+- React.js
+- SCSS
+- Framer-Motion for animations
+- EmailJS for email functionality
+- TagCloud for Hero section effects
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Setup
+To set up the portfolio:
+```
+git clone https://github.com/ge1118/portfolio-website.git
+npm install
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
+The Portfolio Site is deployed on Netlify, a popular web hosting platform, and can be visited at: [Leah's Portfolio Website](https://leah-portfolio-website.netlify.app/). It showcases the responsive design and features of the site in action.
 
-### `npm test`
+Netlify offers efficient hosting and seamless integration with Git repositories, allowing for quick updates and continuous deployment. As a static site host, Netlify provides fast loading times and high performance. However, do note that initial access might take a few moments, especially after recent updates or prolonged inactivity, as the site rebuilds and caches content for optimal delivery.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contact
+For questions or feedback, reach out at [leah.kim0118@gmail.com](mailto:leah.kim0118@gmail.com).
 
-### `npm run build`
+## License
+This project is under a private license.
+[View the project on GitHub](https://github.com/ge1118/portfolio-website)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
