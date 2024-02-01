@@ -5,7 +5,7 @@ export const projectsData = [
         skills: 'HTML, CSS, JavaScript, Python, Flask, TensorFlow, SQLite',
         description: 'Develope a movie recommendation web app with HTML, JavaScript, CSS, Python, and Flask. Implemented a machine learning-based recommendation engine and used SQLite for user data management, enabling personalized suggestions and a favorites feature.',
         github: 'https://github.com/ge1118/movie-recommendation-web-app',
-        source: '',
+        source: 'https://movie-recommendation-webapp-225db83e8b75.herokuapp.com/',
     },
     {
         type: 'Frontend Project',
