@@ -4,6 +4,7 @@ import python from '../images/python.png'
 import tensorflow from '../images/tensorflow.png'
 import csharp from '../images/csharp.png'
 import mysql from '../images/mysql.png'
+import django from '../images/django.png'
 
 export const backendData = [
     {
@@ -13,6 +14,10 @@ export const backendData = [
     {
         logo: expressjs,
         skill: "Express.js"
+    },
+    {
+        logo: django,
+        skill: "Django"
     },
     {
         logo: python,

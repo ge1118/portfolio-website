@@ -90,7 +90,7 @@
                     transition: background-color 0.4s ease;
                 }
 
-                &:nth-of-type(2),
+                // &:nth-of-type(2),
                 &:nth-of-type(3) {
                     .card-items {
                         gap: 6rem;
@@ -281,14 +281,8 @@
                         }
                     }
 
-                    &:nth-of-type(1) {
-                        background-size: 170px 170px;
-                    }
-
-                    &:nth-of-type(2) {
-                        background-size: 170px 170px;
-                    }
-
+                    &:nth-of-type(1),
+                    &:nth-of-type(2),
                     &:nth-of-type(3) {
                         background-size: 170px 170px;
                     }
@@ -326,14 +320,8 @@
                         padding: 3rem;
                     }
 
-                    &:nth-of-type(1) {
-                        background-size: 200px 200px;
-                    }
-
-                    &:nth-of-type(2) {
-                        background-size: 200px 200px;
-                    }
-
+                    &:nth-of-type(1),
+                    &:nth-of-type(2),
                     &:nth-of-type(3) {
                         background-size: 200px 200px;
                     }
@@ -365,7 +353,7 @@
                         padding: 2rem;
                     }
 
-                    &:nth-of-type(2),
+                    // &:nth-of-type(2),
                     &:nth-of-type(3) {
                         .card-items {
                             row-gap: 1.5rem !important;

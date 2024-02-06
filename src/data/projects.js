@@ -16,12 +16,12 @@ export const projectsData = [
         source: 'https://leah-portfolio-website.netlify.app/',
     },
     {
-        type: 'Frontend Project',
-        title: 'FitClub Website',
-        skills: 'HTML, CSS, JavaScript, React',
-        description: 'Develope a dynamic, mobile-responsive fitness club website using HTML, CSS, JavaScript, and React, showcasing a sophisticated UI with features for programs display and membership plans, thereby enhancing user experience and engagement.',
-        github: 'https://github.com/ge1118/fitclub-gym-website',
-        source: 'https://fitclub-gym-webapp.netlify.app/',
+        type: 'FullStack Project',
+        title: 'StudyBuddy Website',
+        skills: 'Python, Django, SQLite, AWS S3, HTML, CSS, JavaScript',
+        description: 'StudyBuddy, built with Django and Python, is a web application that facilitates group study sessions for tech topics. It features secure login, room management, customizable profiles, and a search tool. With SQLite and AWS S3 integration, it provides a scalable and efficient learning environment.',
+        github: 'https://github.com/ge1118/studybud',
+        source: 'https://studybuddy-1f2d333417a5.herokuapp.com/',
     },
 
 ]
