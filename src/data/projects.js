@@ -1,11 +1,11 @@
 export const projectsData = [
     {
-        type: 'FullStack Project',
-        title: 'Movie Recommendation WebApp',
-        skills: 'HTML, CSS, JavaScript, Python, Flask, TensorFlow, SQLite',
-        description: 'Develope a movie recommendation web app with HTML, JavaScript, CSS, Python, and Flask. Implemented a machine learning-based recommendation engine and used SQLite for user data management, enabling personalized suggestions and a favorites feature.',
-        github: 'https://github.com/ge1118/movie-recommendation-web-app',
-        source: 'https://movie-recommendation-webapp-225db83e8b75.herokuapp.com/',
+        type: 'FullStack Project (Main)',
+        title: 'E-Commerce Website',
+        skills: 'React, Redux, SCSS, Python, Django, PostgreSQL, AWS S3',
+        description: 'Develop an e-commerce web app using React, Redux, and SCSS for the frontend, with a Django and Python backend. Utilize PostgreSQL for data management and AWS S3 for media storage. Features include a user authentication, cart, order and payment processing, and admin panels for site management.',
+        github: 'https://github.com/ge1118/ecommerce-proshop',
+        source: 'https://pro-shop-2fb753a2c98c.herokuapp.com/',
     },
     {
         type: 'Frontend Project',

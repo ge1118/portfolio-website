@@ -60,7 +60,7 @@
         flex: 1;
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
         flex-direction: column;
         gap: 3.5rem;
         background: #323841;
@@ -334,7 +334,7 @@
             .inner-outline {
                 margin: 20px;
                 padding: 30px;
-                justify-content: start;
+                justify-content: flex-start;
                 height: auto;
             }
 
