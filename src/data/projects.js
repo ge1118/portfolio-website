@@ -4,8 +4,8 @@ export const projectsData = [
         title: 'E-Commerce Website',
         skills: 'React, Redux, SCSS, Python, Django, PostgreSQL, AWS S3',
         description: 'Develop an e-commerce web app using React, Redux, and SCSS for the frontend, with a Django and Python backend. Utilize PostgreSQL for data management and AWS S3 for media storage. Features include a user authentication, cart, order and payment processing, and admin panels for site management.',
-        github: 'https://github.com/ge1118/ecommerce-proshop',
-        source: 'https://pro-shop-2fb753a2c98c.herokuapp.com/',
+        github: 'https://github.com/ge1118/ecommerce-aura',
+        source: 'https://ecommerce-aura-e096c9042858.herokuapp.com/',
     },
     {
         type: 'Frontend Project',
