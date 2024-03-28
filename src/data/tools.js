@@ -3,6 +3,8 @@ import azure from '../images/azure.png'
 import vs from '../images/vs.png'
 import vscode from '../images/vscode.png'
 import heroku from '../images/heroku.png'
+import aws from '../images/aws.png'
+import paypal from '../images/paypal.png'
 
 export const toolsData = [
     {
@@ -19,10 +21,18 @@ export const toolsData = [
     },
     {
         logo: vscode,
-        skill: "Visual Studio Code"
+        skill: "VS Code"
     },
     {
         logo: heroku,
         skill: "Heroku"
+    },
+    {
+        logo: aws,
+        skill: "AWS"
+    },
+    {
+        logo: paypal,
+        skill: "PayPal"
     },
 ]

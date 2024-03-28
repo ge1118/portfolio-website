@@ -207,6 +207,12 @@
                 .card-items {
                     gap: 3rem !important;
                 }
+
+                &:nth-of-type(2) {
+                    .card-items {
+                        gap: 2rem !important;
+                    }
+                }
             }
         }
     }
@@ -249,6 +255,12 @@
 
                             p {
                                 font-size: 12px;
+                            }
+                        }
+
+                        &:nth-of-type(2) {
+                            .card-items {
+                                gap: 3rem !important;
                             }
                         }
 
@@ -339,6 +351,13 @@
                     &:checked+.card-label {
                         width: 300px;
                         height: 400px;
+
+                        &:nth-of-type(2),
+                        &:nth-of-type(3) {
+                            .card-items {
+                                gap: 2rem !important;
+                            }
+                        }
                     }
                 }
 
@@ -351,14 +370,6 @@
                         row-gap: 1.5rem !important;
                         column-gap: 2rem !important;
                         padding: 2rem;
-                    }
-
-                    // &:nth-of-type(2),
-                    &:nth-of-type(3) {
-                        .card-items {
-                            row-gap: 1.5rem !important;
-                            column-gap: 3.5rem !important;
-                        }
                     }
                 }
             }
