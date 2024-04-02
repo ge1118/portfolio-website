@@ -16,9 +16,9 @@ export const experiencesData = [
         company: 'Ministry of Transportation Ontario',
         duration: 'Sep 2022 - Dec 2022',
         roles: [
-            "Developed and tested software using Angular, NodeJS, ExpressJS, .NET C#, and MySQL.",
+            "Developed and tested software using Angular, ASP.NET C#, and MySQL.",
             "Created unit tests to verify functionality and modified existing tests to increase test success rate.",
-            "Participated in project meetings and collaborated in team-based problem-solving.",
+            "Participated in project meetings and collaborated in team-based problem-solving in agile environment.",
             "Worked on user stories and bug resolution with a focus on development."
         ]
     },
@@ -28,9 +28,9 @@ export const experiencesData = [
         company: 'Alpha Labs',
         duration: 'May 2022 - Aug 2022',
         roles: [
-            "Developed web pages using ASP.NET, JavaScript, HTML, CSS, jQuery and Bootstrap.",
+            "Developed web pages using ASP.NET, JavaScript, HTML, CSS, jQuery, and Bootstrap.",
             "Implemented MVC pattern with C# and MySQL for backend processes.",
-            "Conducted both automated and manual testing by using Selenium, Java, and NUnit, improving software quality.",
+            "Conducted both automated and manual testing by using Selenium, JUnit, and NUnit, improving software quality.",
             "Problem solved with mentorship and feedback from senior developers within a collaborative setting.",
         ]
     }
