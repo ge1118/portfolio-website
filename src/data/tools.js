@@ -5,6 +5,7 @@ import vscode from '../images/vscode.png'
 import heroku from '../images/heroku.png'
 import aws from '../images/aws.png'
 import paypal from '../images/paypal.png'
+import agile from '../images/agile.png'
 
 export const toolsData = [
     {
@@ -34,5 +35,9 @@ export const toolsData = [
     {
         logo: paypal,
         skill: "PayPal"
+    },
+    {
+        logo: agile,
+        skill: "Scrum/Agile"
     },
 ]
